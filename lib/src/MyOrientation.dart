@@ -15,7 +15,18 @@ class _MyOrientationState extends State<MyOrientation> {
       appBar: AppBar(
         title: Text('OrientationBuilder'),
       ),
-      body: Container(),
+      body: OrientationBuilder( // OrientationBuilder로 감싸서 세로 가로 여부를 받을 수 있음
+        builder: (BuildContext context, Orientation orientation) {
+          return GridView.count(
+              crossAxisCount: orientation == Orientation.portrait ? 3 : 5, //세로일 때는 3열 가로일 때는 5열로 나옴
+              children: List.generate(50, (position) {
+                return Center(
+                  child: Text('Item $position'),
+                );
+              })
+          );
+        },
+      )
     );
   }
 }
