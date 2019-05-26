@@ -14,7 +14,7 @@ class _MyTabControllerState extends State<MyTabController> {
     return DefaultTabController(
       child: Scaffold(
         appBar: AppBar(
-          title: Text('OrientationBuilder'),
+          title: Text('TabController'),
           bottom: TabBar(tabs: [ //AppBar 바로 아래 TabBar 구
             Tab(icon: Icon(Icons.access_alarm), text: 'Tab1',), //아이콘과 Tab을 동시에 넣으려면 Tab 안에
             Text('Tab2'),

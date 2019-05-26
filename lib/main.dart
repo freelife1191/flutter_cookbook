@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:fluttercookbook/src/MyAnimatedContainer.dart';
 import 'package:fluttercookbook/src/MyAnimatedOpacity.dart';
 import 'package:fluttercookbook/src/MyDrawer.dart';
+import 'package:fluttercookbook/src/MyFormValidation.dart';
 import 'package:fluttercookbook/src/MyOrientation.dart';
 import 'package:fluttercookbook/src/MySnackBar.dart';
 import 'package:fluttercookbook/src/MyTabController.dart';
@@ -74,6 +75,12 @@ class _HomeState extends State<Home> {
           title: Text('TabController'),
           onTap: () {
             Navigator.push(context, MaterialPageRoute(builder: (context) => MyTabController()));
+          },
+        ),
+        ListTile(
+          title: Text('Form Validation'),
+          onTap: () {
+            Navigator.push(context, MaterialPageRoute(builder: (context) => MyFormValidation()));
           },
         ),
       ],
