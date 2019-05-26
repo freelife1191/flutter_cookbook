@@ -5,6 +5,7 @@ import 'package:fluttercookbook/src/MyDrawer.dart';
 import 'package:fluttercookbook/src/MyFormValidation.dart';
 import 'package:fluttercookbook/src/MyOrientation.dart';
 import 'package:fluttercookbook/src/MySnackBar.dart';
+import 'package:fluttercookbook/src/MySwipeToDismiss.dart';
 import 'package:fluttercookbook/src/MyTabController.dart';
 
 void main() => runApp(MyApp());
@@ -81,6 +82,12 @@ class _HomeState extends State<Home> {
           title: Text('Form Validation'),
           onTap: () {
             Navigator.push(context, MaterialPageRoute(builder: (context) => MyFormValidation()));
+          },
+        ),
+        ListTile(
+          title: Text('Dissmissible'),
+          onTap: () {
+            Navigator.push(context, MaterialPageRoute(builder: (context) => MySwipeToDismiss()));
           },
         ),
       ],
