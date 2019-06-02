@@ -17,10 +17,12 @@ class _MyMethodChannelState extends State<MyMethodChannel> {
   static const platform = const MethodChannel('example.com/value');
   String _value = 'null';
 
+  //비동기로 데이터를 받기위해 필요
   Future<void> _getNativeValue() async {
     String value;
 
     try {
+      //Android나 iOS의 어떤 Method를 실행하게 함
       value = await platform.invokeMethod('getValue');
     } on PlatformException catch (e) {
       value = '네이티브 코드 실행 에러 : ${e.message}';
