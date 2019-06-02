@@ -3,6 +3,7 @@ import 'package:fluttercookbook/src/MyAnimatedContainer.dart';
 import 'package:fluttercookbook/src/MyAnimatedOpacity.dart';
 import 'package:fluttercookbook/src/MyDrawer.dart';
 import 'package:fluttercookbook/src/MyFormValidation.dart';
+import 'package:fluttercookbook/src/MyMethodChannel.dart';
 import 'package:fluttercookbook/src/MyOrientation.dart';
 import 'package:fluttercookbook/src/MySnackBar.dart';
 import 'package:fluttercookbook/src/MySwipeToDismiss.dart';
@@ -88,6 +89,12 @@ class _HomeState extends State<Home> {
           title: Text('Dissmissible'),
           onTap: () {
             Navigator.push(context, MaterialPageRoute(builder: (context) => MySwipeToDismiss()));
+          },
+        ),
+        ListTile(
+          title: Text('네이티브코드 연동-Flutter'),
+          onTap: () {
+            Navigator.push(context, MaterialPageRoute(builder: (context) => MyMethodChannel()));
           },
         ),
       ],
